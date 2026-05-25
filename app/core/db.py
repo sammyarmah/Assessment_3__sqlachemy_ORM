@@ -6,7 +6,7 @@ DATABASE_URL = settings.DATABASE_URL_SYNC
 
 engine = create_engine(
     DATABASE_URL,
-    echo=True 
+    echo=True if settings.ENVIRONMENT == "DEBUG" else False,
 )
 
 SessionLocal = sessionmaker(
