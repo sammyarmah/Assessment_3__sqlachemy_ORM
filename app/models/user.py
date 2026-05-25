@@ -4,7 +4,7 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from app.models.user import Post
+    from app.models.post import Post
 
 class User(Base):
     __tablename__ = "users"
